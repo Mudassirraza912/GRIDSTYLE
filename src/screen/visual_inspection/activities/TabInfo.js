@@ -33,7 +33,7 @@ class TabInfo extends Component {
         var edit = JSON.stringify(!this.state.editing)
         try {
             await AsyncStorage.setItem('editKey',edit);
-            console.log('enableEditButton =>')
+//             console.log('enableEditButton =>')
           } catch (error) {
             // Error saving data
                         console.log('enableEditButton error =>')
@@ -46,14 +46,14 @@ class TabInfo extends Component {
             const value = await AsyncStorage.getItem('editKey');
             if (value !== null) {
               // We have data!!
-            console.log('enableEditButton getting data =>', value)
+//             console.log('enableEditButton getting data =>', value)
             var convertVal = JSON.parse(value)
-            console.log('enableButton getting data After JSON in TEABINFO =>', value)
+//             console.log('enableButton getting data After JSON in TEABINFO =>', value)
             this.setState({editing: convertVal})
             }
           } catch (error) {
             // Error retrieving data
-            console.log('Errr getting data =>', error)
+//             console.log('Errr getting data =>', error)
 
           }
     }
