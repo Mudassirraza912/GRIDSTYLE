@@ -37,10 +37,10 @@ class SiteInfo extends Component {
         var edit = JSON.stringify(!this.state.editing)
         try {
             await AsyncStorage.setItem('editKey',edit);
-            console.log('enableButton =>')
+//             console.log('enableButton =>')
           } catch (error) {
             // Error saving data
-                        console.log('enableButton error =>')
+//                         console.log('enableButton error =>')
 
           }
     }
@@ -50,14 +50,14 @@ class SiteInfo extends Component {
             const value = await AsyncStorage.getItem('editKey');
             if (value !== null) {
               // We have data!!
-            console.log('enableButton getting data =>', value)
+//             console.log('enableButton getting data =>', value)
             var convertVal = JSON.parse(value)
-            console.log('enableButton getting data After JSON in SITEINFO =>', value)
+//             console.log('enableButton getting data After JSON in SITEINFO =>', value)
             this.setState({editing: convertVal})
             }
           } catch (error) {
             // Error retrieving data
-            console.log('Errr getting data =>', error)
+//             console.log('Errr getting data =>', error)
 
           }
     }
